@@ -1,0 +1,134 @@
+STEP-1: Go inside your project folder
+
+(You already opened CMD inside Embedded_C, so just for understanding)
+
+🔹 What it does:
+Moves Command Prompt into the Embedded_C folder
+(Git always works inside a folder)
+
+📌 STEP-2: Start Git in this folder
+git init
+
+
+🔹 What it does:
+
+Creates a hidden folder called .git
+
+Tells Git:
+👉 “This folder is now a Git project”
+
+No files are saved yet
+
+📌 STEP-3: Check current Git status
+git status
+
+
+🔹 What it does:
+
+Shows which files/folders are:
+
+Untracked (red)
+
+Modified
+
+Ready to commit
+
+First time, everything will be red
+
+Example output meaning:
+
+Untracked files:
+  01_Basics/
+  02_GPIO/
+
+
+👉 Git sees them but is NOT saving them yet
+
+📌 STEP-4: Tell Git to track everything
+git add .
+
+
+🔹 What it does:
+
+add = select files to save
+
+. = everything in current folder
+
+Moves files to staging area
+(ready to be saved)
+
+📌 STEP-5: Save the project (commit)
+git commit -m "Initial Embedded_C project structure"
+
+
+🔹 What it does:
+
+Takes a snapshot of current folders
+
+Saves it permanently in Git history
+
+-m = message explaining what you saved
+
+Think of it as:
+🧠 CTRL + S with memory
+
+📌 STEP-6: Check status again
+git status
+
+
+🔹 What it does:
+
+Confirms everything is saved
+
+You should see:
+
+nothing to commit, working tree clean
+
+
+✔ Means Git is happy 😊
+
+📌 STEP-7: When you add a NEW project later
+
+Example: you add 03_ADC/01_ADC_Read
+
+Run:
+
+git status        # see new files
+git add .         # select new files
+git commit -m "Added ADC read project"
+
+
+🔹 What it does:
+
+Saves only the new changes
+
+Keeps history clean
+
+IMPORTANT CONCEPT (1 minute)
+
+Git → works on your computer (local)
+
+GitHub → website to see code online (web)
+
+👉 To see on web, you must push your project to GitHub once.
+
+STEP-1: Create Repository on GitHub (Web)
+🔹 Do this:
+
+Open browser
+
+Go to 👉 https://github.com
+
+Login to your account
+
+Click ➕ (top right) → New repository
+
+🔹 Fill details:
+
+Repository name: Embedded_C
+
+Description: STM32 Embedded C projects
+
+Select Public
+
+❌ Do NOT check README / .gitignore / license
