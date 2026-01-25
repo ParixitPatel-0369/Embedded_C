@@ -296,7 +296,7 @@ Q: Why LED efficiency reduces at high current?
 
 “An LED is a current-driven PN junction device that emits light due to electroluminescence. Different LED types are available based on color, structure, and power, and proper current limiting is required to ensure reliability.”
 
-what is positive level LED and -ve level LED?? 
+***what is positive level LED and -ve level LED??***
 
 1️⃣ Positive level LED (Active-HIGH LED)
 
