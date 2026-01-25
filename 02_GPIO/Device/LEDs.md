@@ -296,3 +296,92 @@ Q: Why LED efficiency reduces at high current?
 
 “An LED is a current-driven PN junction device that emits light due to electroluminescence. Different LED types are available based on color, structure, and power, and proper current limiting is required to ensure reliability.”
 
+what is positive level LED and -ve level LED?? 
+
+1️⃣ Positive level LED (Active-HIGH LED)
+
+Meaning:
+The LED turns ON when the signal is HIGH (1 / Vcc)
+
+How it’s connected:
+
+MCU pin → resistor → LED → GND
+
+Working:
+
+Pin = HIGH (3.3V / 5V) → current flows → LED ON
+
+Pin = LOW (0V) → no current → LED OFF
+
+Truth table:
+
+MCU Pin	LED
+HIGH	ON
+LOW	OFF
+
+Used when:
+
+You want simple logic
+
+Enough current sourcing capability from MCU pin
+
+2️⃣ Negative level LED (Active-LOW LED)
+
+Meaning:
+The LED turns ON when the signal is LOW (0 / GND)
+
+How it’s connected:
+
+Vcc → resistor → LED → MCU pin
+
+Working:
+
+Pin = LOW → current flows into pin → LED ON
+
+Pin = HIGH → no current → LED OFF
+
+Truth table:
+
+MCU Pin	LED
+LOW	ON
+HIGH	OFF
+
+Used when:
+
+MCU can sink more current than source (very common)
+
+Board designers want safer, more reliable I/O
+
+Many dev boards & automotive ECUs
+
+3️⃣ Real examples (you may have seen this)
+
+🔹 STM32 NUCLEO board LED
+
+Usually Active-LOW
+
+You write GPIO_RESET → LED ON 😄
+
+🔹 Arduino beginner examples
+
+Often Active-HIGH
+
+digitalWrite(LED, HIGH) → LED ON
+
+4️⃣ Why designers prefer Active-LOW LEDs
+
+✔ Better current sinking
+✔ Safer during reset (pins default HIGH-Z)
+✔ Matches automotive & industrial standards
+✔ Less noise issues
+
+5️⃣ Quick memory trick 🧠
+
+Positive level LED → HIGH = ON
+
+Negative level LED → LOW = ON
+
+Or simply:
+
+Active-HIGH = ON at HIGH
+Active-LOW = ON at LOW
