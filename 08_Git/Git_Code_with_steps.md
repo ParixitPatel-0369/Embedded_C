@@ -524,5 +524,65 @@ Bring back:
 
 *git stash pop*
 
+-------------------------------------------
 
+Git for embedded Developer:: 
+
+***What to PUSH vs What to IGNORE***
+
+✅ PUSH (must be in Git)
+
+.c / .h files
+
+startup_stm32f401xx.s
+
+.uvprojx
+
+README.md
+
+.gitignore
+
+❌ NEVER push
+
+Objects/
+
+Listings/
+
+.axf
+
+.hex
+
+.map
+
+.bak
+
+***.gitignore (Embedded-Specific)***
+
+Create .gitignore in root and paste exactly this:
+
+# Keil build output
+Objects/
+Listings/
+
+
+# Build files
+*.axf
+*.hex
+*.bin
+*.map
+
+
+# Keil backup files
+*.bak
+*.dep
+*.crf
+*.d
+*.o
+
+
+# Editor junk
+*.uvguix.*
+*.scvd
+
+This keeps your repo clean and professional.
 
