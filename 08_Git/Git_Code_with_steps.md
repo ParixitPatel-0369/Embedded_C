@@ -559,30 +559,8 @@ Listings/
 ***.gitignore (Embedded-Specific)***
 
 Create .gitignore in root and paste exactly this:
+<img width="247" height="436" alt="image" src="https://github.com/user-attachments/assets/ea0c698b-208a-4de7-a0ee-bddbdb13e93b" />
 
-## Keil build output
-Objects/
-Listings/
-
-
-## Build files
-*.axf
-*.hex
-*.bin
-*.map
-
-
-## Keil backup files
-*.bak
-*.dep
-*.crf
-*.d
-*.o
-
-
-## Editor junk
-*.uvguix.*
-*.scvd
 
 This keeps your repo clean and professional.
 
