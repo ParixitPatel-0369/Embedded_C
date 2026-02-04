@@ -560,19 +560,19 @@ Listings/
 
 Create .gitignore in root and paste exactly this:
 
-# Keil build output
+## Keil build output
 Objects/
 Listings/
 
 
-# Build files
+## Build files
 *.axf
 *.hex
 *.bin
 *.map
 
 
-# Keil backup files
+## Keil backup files
 *.bak
 *.dep
 *.crf
@@ -580,7 +580,7 @@ Listings/
 *.o
 
 
-# Editor junk
+## Editor junk
 *.uvguix.*
 *.scvd
 
